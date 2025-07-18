@@ -1,0 +1,74 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #FDB9E5;
+  color: #FDA1DC;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #741caa;
+  margin-bottom: 40px;
+}
+
+#malla {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ciclo {
+  background-color: #f1e3ff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(116, 28, 170, 0.1);
+}
+
+.ciclo h2 {
+  color: #741caa;
+  margin-top: 0;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.ramo {
+  background: linear-gradient(135deg, #dfc0ff, #e7c9ff);
+  border: 2px solid #a851d4;
+  padding: 12px 18px;
+  margin: 10px 0;
+  border-radius: 15px;
+  color: #3d005e;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 4px rgba(90, 19, 132, 0.1);
+}
+
+.ramo:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(90, 19, 132, 0.2);
+}
+
+.ramo.aprobado {
+  background: linear-gradient(135deg, #fbb1f4, #fdd4f9);
+  border-color: #d43ea3;
+  color: #6e004f;
+  position: relative;
+}
+
+.ramo.aprobado::after {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 18px;
+}
+
+.ramo.bloqueado {
+  opacity: 0.4;
+  pointer-events: none;
+  filter: grayscale(60%);
+}
